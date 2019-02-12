@@ -1,0 +1,23 @@
+#include <Servo.h>
+Servo myservo;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  myservo.attach(9);
+  pinMode(9, OUTPUT);
+  // float max = 1023.0;
+  // float min = 0.0;
+  Servo (myservo);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int a = analogRead(A0);
+  int theta = (int)((180.0 / 1023.0) * a);
+  Serial.println(a);
+  Serial.println(theta);
+  delay(10);
+  myservo.write(theta);
+  
+}
