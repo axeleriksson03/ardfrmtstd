@@ -1,2 +1,2 @@
-# ardfrmtstd
+# arduinoframtidsstaden
 Arduino//potentiometer och servo
